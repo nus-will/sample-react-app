@@ -8,20 +8,27 @@ import Login from '../Login'
 import Detail from '../Detail'
 import { useSelector } from 'react-redux'
 
-const requireLogin = (component, loggedIn) => {
-  const LoggedInComponent = component
+const requireLogIn = (component, loggedIn) => {
+  let Component = component
   return loggedIn ?
-    <LoggedInComponent /> :
+    <Component /> :
     <Navigate to="/login" />
+}
+
+const requireLogout = (component, loggedIn) => {
+  let Component = component
+  return loggedIn ?
+    <Navigate to="/" /> :
+    <Component />
 }
 
 function RoutingSystem() {
   let loggedIn = useSelector(state => state.user.loggedIn)
   return (
     <Routes>
-      <Route path="/login" element={<Login />} />
-      <Route path="/detail/:id" element={requireLogin(Detail, loggedIn)} />
-      <Route path="/" element={requireLogin(Home, loggedIn)} />
+      <Route path="/login" element={requireLogout(Login, loggedIn)} />
+      <Route path="/detail/:id" element={requireLogIn(Detail, loggedIn)} />
+      <Route path="/" element={requireLogIn(Home, loggedIn)} />
     </Routes>
   );
 }

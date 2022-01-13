@@ -6,6 +6,7 @@ import {
 } from 'antd';
 import { useDispatch } from 'react-redux'
 import { setUser } from '../../redux/reducers/user'
+import './login.css'
 
 function Login() {
   const dispatch = useDispatch()
@@ -16,7 +17,7 @@ function Login() {
 
   return (
     <Form
-      name="basic"
+      name="login"
       labelCol={{
         span: 8,
       }}
