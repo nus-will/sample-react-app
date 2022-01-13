@@ -5,12 +5,12 @@ import {
 
 export const setUser = createAction('user/set')
 
-const initialState = { loggedIn: false, email: null }
+const initialState = { loggedIn: false, username: null }
 
 export const user = createReducer(initialState, (builder) => {
   builder
     .addCase(setUser, (state, action) => {
-      state.email = action.payload
+      state.username = action.payload
       state.loggedIn = true
     })
 })
