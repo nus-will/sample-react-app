@@ -10,6 +10,7 @@ const initialState = { loggedIn: false, email: null }
 export const user = createReducer(initialState, (builder) => {
   builder
     .addCase(setUser, (state, action) => {
-      state.user = {...action.payload}
+      state.email = action.payload
+      state.loggedIn = true
     })
 })

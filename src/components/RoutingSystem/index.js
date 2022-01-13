@@ -15,7 +15,6 @@ const requireLogin = (component, loggedIn) => {
     <Navigate to="/login" />
 }
 
-
 function RoutingSystem() {
   let loggedIn = useSelector(state => state.user.loggedIn)
   return (
