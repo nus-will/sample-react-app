@@ -2,3 +2,7 @@
   max-width: 1000px;
   margin: auto;
 }
+
+#home-projects .actions .ant-space-item:hover {
+  color: deepskyblue;
+}

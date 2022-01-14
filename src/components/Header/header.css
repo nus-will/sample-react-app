@@ -2,11 +2,11 @@
   margin-bottom: 50px;
 }
 
-.profile {
+#header .profile {
   float: right;
   color:  white;
 }
 
-.profile .ant-avatar{
+#header .profile .ant-avatar{
   margin-left:  5px;
 }

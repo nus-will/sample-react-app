@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux'
 import { Table, Space } from 'antd'
+import { DeleteOutlined, LineChartOutlined } from '@ant-design/icons'
 import './home.css'
 import { deleteProject } from '../../redux/reducers/projects'
 import { useDispatch } from 'react-redux'
@@ -11,7 +12,8 @@ function Home() {
   const dispatch = useDispatch()
 
   const onDelete = (projectId) => {
-    dispatch(deleteProject(projectId))
+    let result = window.confirm("Are you sure?")
+    result && dispatch(deleteProject(projectId))
   }
 
   const onViewDetails = (projectId) => {
@@ -38,9 +40,9 @@ function Home() {
       title: 'Action',
       key: 'action',
       render: (text, record) => (
-        <Space size="middle">
-          <a onClick={() => onViewDetails(record.id)} >View detail</a>
-          <a onClick={() => onDelete(record.id)} >Delete</a>
+        <Space size="middle" className='actions'>
+          <LineChartOutlined onClick={() => onViewDetails(record.id)} />
+          <DeleteOutlined onClick={() => onDelete(record.id)} />
         </Space>
       ),
     },
