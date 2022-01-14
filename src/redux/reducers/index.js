@@ -1,5 +1,5 @@
-import {user} from './user'
-import {projects} from './projects'
+import { user } from './user'
+import { projects } from './projects'
 
 const reducer = {
   user,

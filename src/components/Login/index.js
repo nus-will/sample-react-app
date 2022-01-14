@@ -3,7 +3,7 @@ import {
   Input,
   Button,
   Checkbox
-} from 'antd';
+} from 'antd'
 import { useDispatch } from 'react-redux'
 import { setUser } from '../../redux/reducers/user'
 import './login.css'

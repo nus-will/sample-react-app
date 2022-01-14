@@ -9,8 +9,15 @@ const initialState = [
   {
     id: 1,
     name: 'React App',
-    createBy: 'Will NUS',
-    createDate: 'Jan 13, 2021',
+    createdBy: 'Will NUS',
+    createdDate: 'Jan 13, 2021',
+    nValues: {}
+  },
+  {
+    id: 2,
+    name: 'React App 02',
+    createdBy: 'Will NUS',
+    createdDate: 'Jan 14, 2021',
     nValues: {}
   }
 ]
