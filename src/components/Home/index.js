@@ -6,7 +6,6 @@ import { useDispatch } from 'react-redux'
 import { useNavigate } from "react-router-dom";
 
 function Home() {
-
   let projects = useSelector(state => state.projects)
   let navigate = useNavigate();
   const dispatch = useDispatch()
