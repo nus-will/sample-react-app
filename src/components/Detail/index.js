@@ -6,9 +6,7 @@ import {
   Tooltip,
   Legend
 } from 'recharts'
-import {
-  useParams
-} from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { useSelector } from 'react-redux'
 import './detail.css'
 
